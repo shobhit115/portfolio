@@ -2,7 +2,7 @@ import profileImg from '@/assets/profile.png';
 
 const About = () => {
   return (
-    <section id="about" className="relative py-20 px-4">
+    <section id="about" className="relative py-20 px-1 sm:px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-4 text-gradient">
@@ -37,7 +37,7 @@ const About = () => {
                 href="https://github.com/shobhit115"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -bottom-6 -right-6 w-16 h-16 bg-accent rounded-full flex items-center justify-center border-4 border-background shadow-lg hover:scale-110 transition-transform animate-bounce"
+                className="absolute -bottom-6 -right-6 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-lg hover:scale-110 transition-transform animate-bounce"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -63,18 +63,18 @@ const About = () => {
           </div>
 
           {/* About Content */}
-          <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <p className="text-lg text-foreground/90 leading-relaxed">
+          <div className="space-y-6 animate-fade-in-up " style={{ animationDelay: '0.2s' }}>
+            <p className="text-md sm:text-lg text-foreground/90 leading-relaxed">
               Hello, I'm <span className="text-primary font-semibold">Shobhit Singh</span>,
               a dedicated web developer focused on building efficient and scalable digital solutions using modern web technologies.
             </p>
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
+            <p className="text-md sm:text-lg  text-foreground/80 leading-relaxed">
               With a strong foundation in <span className="text-accent">full-stack development</span>,
               I specialize in creating dynamic, high-performance applications using React, Node.js, and contemporary frameworks.
             </p>
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
+            <p className="text-md sm:text-lg  text-foreground/80 leading-relaxed">
               I combine technical expertise with creative problem-solving to design user-centric, reliable, and maintainable software.
               My goal is to deliver clean, impactful solutions that balance innovation with long-term stability.
             </p>

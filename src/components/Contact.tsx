@@ -70,15 +70,15 @@ const Contact = () => {
   const socialLinks = [
     { icon: <Github className="w-6 h-6" />, href: 'https://github.com/shobhit115', label: 'GitHub' },
     { icon: <Linkedin className="w-6 h-6" />, href: 'https://linkedin.com/in/shobhit-singh-34a745249', label: 'LinkedIn' },
-    { icon: <Mail className="w-6 h-6" />, href: 'mailto:shobhitsinghsingh.2019@gmail.com?subject=Hello%20Shobhit%20Singh&body=Hi%20Shobhit%2C%0D%0A', label: 'Email' },
+    { icon: <Mail className="w-6 h-6" />, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=shobhitsinghsingh.2019@gmail.com', label: 'Email' },
   ];
 
   return (
-    <section id="contact" className="relative py-20 px-4">
+    <section id="contact" className="relative py-20 sm:px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-4 text-gradient">
-            Contact Mission Control
+            Contact
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-4"></div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

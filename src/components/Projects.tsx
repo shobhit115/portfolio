@@ -33,7 +33,7 @@ const Projects = () => {
       description: 'My personal developer portfolio',
       longDescription:
         'Responsive portfolio built with Next.js and Tailwind CSS. Includes animated project sections, dark mode, and category filtering — designed to showcase all my major work and achievements.',
-      tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      tech: ['React.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       github: 'https://github.com/shobhit115/portfolio',
       demo: 'https://shobhit115.vercel.app',
       image: portfolioImg,
@@ -63,20 +63,7 @@ const Projects = () => {
       image:
         vakeelaiImg,
       year: 2025,
-    },
-
-    {
-      title: 'Reps Counting ML Project',
-      category: 'AI / CV',
-      description: 'Computer vision-based workout rep counter',
-      longDescription:
-        'A fitness-focused ML project that detects and counts workout repetitions using pose estimation. Built using OpenCV and Mediapipe for real-time joint tracking and Python for logic handling.',
-      tech: ['Python', 'OpenCV', 'Mediapipe', 'NumPy'],
-      github: 'https://github.com/shobhit115/Reps-Counting-ML-Project',
-      demo: '',
-      image: repesImg,
-      year: 2023,
-    },
+    },    
     {
       title: 'HowOld.AI',
       category: 'AI / CV',
@@ -114,6 +101,18 @@ const Projects = () => {
       year: 2024,
     },
     {
+      title: 'Reps Counting ML Project',
+      category: 'AI / CV',
+      description: 'Computer vision-based workout rep counter',
+      longDescription:
+        'A fitness-focused ML project that detects and counts workout repetitions using pose estimation. Built using OpenCV and Mediapipe for real-time joint tracking and Python for logic handling.',
+      tech: ['Python', 'OpenCV', 'Mediapipe', 'NumPy'],
+      github: 'https://github.com/shobhit115/Reps-Counting-ML-Project',
+      demo: '',
+      image: repesImg,
+      year: 2023,
+    },
+    {
       title: 'Travel Website',
       category: 'Web',
       description: 'A responsive travel-themed website built for a hackathon during my 1st year of graduation.',
@@ -123,7 +122,7 @@ const Projects = () => {
       github: 'https://github.com/shobhit115/Travel_website',
       demo: 'https://infiniycoderspsrs.netlify.app/home',
       image: travelwebsiteImg,
-      year: 2022,
+      year: 2023,
     },
 
   ];

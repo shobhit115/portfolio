@@ -1,8 +1,19 @@
 import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroSpace from '@/assets/hero2.png';
+import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
+  const { toast } = useToast();
+
+  const handleDownload = () => {
+    toast({
+      title: "📄 Download started",
+      description: "Initiating data transfer sequence...",
+      duration: 2000, // auto-close after 2s
+    });
+  };
+
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
     if (aboutSection) {
@@ -24,11 +35,13 @@ const Hero = () => {
       />
 
       {/* Floating Orbs */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-20 left-10 w-32 h-32 bg-primary/30 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-10 right-20 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 animate-fade-in-up">
+      <div className="relative z-10 text-center px-2 sm:px-4 animate-fade-in-up">
+
         <div className="inline-block mb-4">
           <span className="text-primary text-sm font-orbitron tracking-widest uppercase border border-primary/30 px-4 py-2 rounded-full glow-cyan">
             Welcome to My portfolio
@@ -58,6 +71,7 @@ const Hero = () => {
         <Button
           asChild
           size="lg"
+          onClick={handleDownload}
           className="group relative bg-primary hover:bg-primary/90 text-primary-foreground font-orbitron font-semibold px-8 py-6 text-lg border-glow transition-all duration-300 hover:scale-105"
         >
           <a

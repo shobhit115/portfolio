@@ -33,8 +33,8 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-card/80 backdrop-blur-md shadow-lg border-b border-primary/20' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${(isScrolled || isMobileMenuOpen)
+         ? 'bg-card/80 backdrop-blur-md shadow-lg border-b border-primary/20' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -70,7 +70,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-primary/20">
+          <div className=" md:hidden py-4 border-t border-primary/20">
             {navItems.map((item) => (
               <a
                 key={item.label}
