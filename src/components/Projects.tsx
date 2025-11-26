@@ -10,6 +10,7 @@ import qrImg from "../assets/qr.png";
 import classiflyImg from "../assets/classify.png";
 import travelwebsiteImg from "../assets/travel.png";
 import hackathonLandingImg from "../assets/landingpage.png";
+import techthriveImg from "../assets/techthrive-2.png";
 interface Project {
   title: string;
   category: string;
@@ -20,11 +21,14 @@ interface Project {
   demo: string;
   image: string;
   year: number;
+  isFeatured?: boolean;   // ✅ NEW
 }
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState('Featured');
+
 
   const projects: Project[] = [
     {
@@ -38,7 +42,20 @@ const Projects = () => {
       demo: 'https://shobhit115.vercel.app',
       image: portfolioImg,
       year: 2025,
+      isFeatured: true,
     },
+    {
+  "title": "TechThrive 2.0 – Hackathon Website",
+  "category": "Web",
+  "description": "Official website for TechThrive 2.0 college hackathon",
+  "longDescription": "A responsive and modern hackathon website built to promote TechThrive 2.0 at Quantum University. It includes event details, problem statements, timeline, registration flow, and sponsor sections, all optimized for mobile and desktop users.",
+  "tech": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+  "github": "https://github.com/qucodex/TechThrive-2",
+  "demo": "https://qucodex.github.io/TechThrive-2/",
+  "image": techthriveImg,
+  "year": 2025,
+  "isFeatured": true
+},
     {
       title: 'Club Hackathon Landing Page',
       category: 'Web',
@@ -50,10 +67,11 @@ const Projects = () => {
       demo: 'https://landing-page-vert-six-14.vercel.app/',
       image: hackathonLandingImg,
       year: 2025,
+      isFeatured: true,
     },
     {
       title: 'VakeelAI',
-      category: 'AI / Web',
+      category: 'AI / ML',
       description: 'AI-powered legal assistant for Indian law queries',
       longDescription:
         'VakeelAI is an intelligent legal assistant that answers queries related to Indian laws. It combines Gemini AI, FAISS-based embeddings, and the Tavily API to analyze legal documents and generate context-aware responses via Streamlit.',
@@ -66,7 +84,7 @@ const Projects = () => {
     },    
     {
       title: 'HowOld.AI',
-      category: 'AI / CV',
+      category: 'AI / ML',
       description: 'Predicts age and gender from images',
       longDescription:
         'A deep learning app that predicts a persons age and gender using TensorFlow and OpenCV. It supports both image uploads and live webcam input, with a clean Streamlit interface.',
@@ -78,7 +96,7 @@ const Projects = () => {
     },
     {
       title: 'QR Code Generator',
-      category: 'Web Utility',
+      category: 'Web',
       description: 'Instant QR code generator for text or URLs',
       longDescription:
         'A lightweight tool that generates and downloads QR codes instantly. Built with simple UI and minimal dependencies for fast performance and practical usability.',
@@ -90,7 +108,7 @@ const Projects = () => {
     },
     {
       title: 'ClassifyX',
-      category: 'ML',
+      category: 'AI / ML',
       description: 'Interactive image classification web app',
       longDescription:
         'ClassifyX lets users upload or capture images for instant predictions using a PyTorch-based CNN. The Streamlit interface offers real-time feedback and visualization of predictions.',
@@ -102,7 +120,7 @@ const Projects = () => {
     },
     {
       title: 'Reps Counting ML Project',
-      category: 'AI / CV',
+      category: 'AI / ML',
       description: 'Computer vision-based workout rep counter',
       longDescription:
         'A fitness-focused ML project that detects and counts workout repetitions using pose estimation. Built using OpenCV and Mediapipe for real-time joint tracking and Python for logic handling.',
@@ -127,11 +145,16 @@ const Projects = () => {
 
   ];
 
-  const categories = ['All', 'Web', 'ML', 'Open Source'];
+  const categories = ['Featured', 'Web', 'AI / ML', 'Open Source', 'All'];
 
-  const filteredProjects = filter === 'All'
+
+  const filteredProjects =
+  filter === 'Featured'
+    ? projects.filter(p => p.isFeatured)
+    : filter === 'All'
     ? projects
     : projects.filter(p => p.category === filter);
+
 
   return (
     <section id="projects" className="relative py-20 px-4">
