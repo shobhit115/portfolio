@@ -11,6 +11,7 @@ import classiflyImg from "../assets/classify.png";
 import travelwebsiteImg from "../assets/travel.png";
 import hackathonLandingImg from "../assets/landingpage.png";
 import techthriveImg from "../assets/techthrive-2.png";
+import crazyuxImg from '../assets/crazyux.png';
 interface Project {
   title: string;
   category: string;
@@ -67,7 +68,6 @@ const Projects = () => {
       demo: 'https://landing-page-vert-six-14.vercel.app/',
       image: hackathonLandingImg,
       year: 2025,
-      isFeatured: true,
     },
     {
       title: 'VakeelAI',
@@ -81,6 +81,20 @@ const Projects = () => {
       image:
         vakeelaiImg,
       year: 2025,
+    },  
+    {
+      title: 'CrazyUX',
+      category: 'Open Source',
+      description: 'CrazyUX is a creative and experimental web project built to showcase funny, quirky, and unconventional UI/UX designs.',
+      longDescription:
+        'CrazyUX stands for Crazy User Experience - a project built to show that websites do not always need to be serious, perfect, or predictable. This open-source collection brings together dozens of creative web pages filled with unusual interactions, playful UI ideas, and humorous twists that can make your friends laugh and remind everyone that technology can be fun too.',
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/shobhit115/CrazyUX',
+      demo: 'https://shobhit115.github.io/CrazyUX/',
+      image:
+        crazyuxImg,
+      year: 2025,
+      isFeatured: true,
     },    
     {
       title: 'HowOld.AI',
