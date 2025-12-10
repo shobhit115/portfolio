@@ -1,6 +1,6 @@
 import { Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroSpace from '@/assets/hero2.png';
+import heroSpace from '@/assets/hero4.jpg';
 import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
