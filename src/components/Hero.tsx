@@ -8,11 +8,17 @@ const Hero = () => {
 
   const handleDownload = () => {
     toast({
-      title: "📄 Download started",
+      title: "📄 Opening Resume",
       description: "Initiating data transfer sequence...",
-      duration: 2000, // auto-close after 2s
+      duration: 2000,
     });
+
+    // Redirect AFTER toast animation
+    setTimeout(() => {
+      window.open("https://docs.google.com/document/d/1jFSlk10GIzyCWhy8B6UkfJz7wbGKQENN/edit?usp=sharing&ouid=110475960769074966492&rtpof=true&sd=true", "_blank");
+    }, 2000); // same as toast duration
   };
+
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -69,20 +75,16 @@ const Hero = () => {
           Explore My Universe
         </Button> */}
         <Button
-          asChild
           size="lg"
           onClick={handleDownload}
           className="group relative bg-primary hover:bg-primary/90 text-primary-foreground font-orbitron font-semibold px-8 py-6 text-lg border-glow transition-all duration-300 hover:scale-105"
         >
-          <a
-            href="/Resume_ShobhitSingh.pdf"
-            download
-            className="flex items-center"
-          >
+          <div className="flex items-center">
             <Rocket className="mr-2 h-5 w-5 group-hover:rotate-45 transition-transform duration-300" />
-            Download Resume
-          </a>
+            View Resume
+          </div>
         </Button>
+
       </div>
     </section>
   );
