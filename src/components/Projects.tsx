@@ -12,6 +12,9 @@ import travelwebsiteImg from "../assets/travel.png";
 import hackathonLandingImg from "../assets/landingpage.png";
 import techthriveImg from "../assets/techthrive-2.png";
 import crazyuxImg from '../assets/crazyux.png';
+import openlearnyImg from '../assets/openlearny.png';
+import projectShowcaseImg from '../assets/projectshowcase.png';
+
 interface Project {
   title: string;
   category: string;
@@ -43,20 +46,53 @@ const Projects = () => {
       demo: 'https://shobhit115.vercel.app',
       image: portfolioImg,
       year: 2025,
-      isFeatured: true,
+      isFeatured: false,
     },
     {
-  "title": "TechThrive 2.0 – Hackathon Website",
-  "category": "Web",
-  "description": "Official website for TechThrive 2.0 college hackathon",
-  "longDescription": "A responsive and modern hackathon website built to promote TechThrive 2.0 at Quantum University. It includes event details, problem statements, timeline, registration flow, and sponsor sections, all optimized for mobile and desktop users.",
-  "tech": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
-  "github": "https://github.com/qucodex/TechThrive-2",
-  "demo": "https://qucodex.github.io/TechThrive-2/",
-  "image": techthriveImg,
-  "year": 2025,
-  "isFeatured": true
-},
+      "title": "TechThrive 2.0 – Hackathon Website",
+      "category": "Web",
+      "description": "Official website for TechThrive 2.0 college hackathon",
+      "longDescription": "A responsive and modern hackathon website built to promote TechThrive 2.0 at Quantum University. It includes event details, problem statements, timeline, registration flow, and sponsor sections, all optimized for mobile and desktop users.",
+      "tech": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "github": "https://github.com/qucodex/TechThrive-2",
+      "demo": "https://qucodex.github.io/TechThrive-2/",
+      "image": techthriveImg,
+      "year": 2025,
+      "isFeatured": true
+    },
+    {
+      "title": "OpenLearny",
+      "category": "Open Source",
+      "description": "An open learning platform for technology, science, and mathematics.",
+      "longDescription": "OpenLearny is an open learning platform designed to make technology, science, and mathematics understandable through structured, step-by-step exploration. The platform is built progressively, with content added as concepts are learned, tested, and refined. It focuses on clarity, fundamentals, and continuous improvement, serving as a long-term learning hub.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "github": "https://github.com/openlearny/home",
+      "demo": "https://openlearny.publicvm.com/",
+      "image": openlearnyImg,
+      "year": 2025,
+      "isFeatured": true
+    },
+    {
+      "title": "Project Showcase",
+      "category": "Web",
+      "description": "A frontend project showcase website with interactive Three.js backgrounds.",
+      "longDescription": "An interactive project showcase website built using HTML, CSS, and JavaScript to present all my frontend projects in one place. The site features a dynamic Three.js canvas background with three distinct scenes: a particle nebula, a wave-based animation, and a crystal cube effect. These scenes enhance visual engagement while maintaining performance and usability, demonstrating creative frontend development and real-time 3D interaction.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Three.js"
+      ],
+      "github": "https://github.com/shobhit115/project-showcase",
+      "demo": "https://shobhit.work.gd",
+      "image": projectShowcaseImg,
+      "year": 2025,
+      "isFeatured": false
+    },
     {
       title: 'Club Hackathon Landing Page',
       category: 'Web',
@@ -81,7 +117,8 @@ const Projects = () => {
       image:
         vakeelaiImg,
       year: 2025,
-    },  
+      isFeatured: true
+    },
     {
       title: 'CrazyUX',
       category: 'Open Source',
@@ -95,7 +132,7 @@ const Projects = () => {
         crazyuxImg,
       year: 2025,
       isFeatured: true,
-    },    
+    },
     {
       title: 'HowOld.AI',
       category: 'AI / ML',
@@ -163,11 +200,11 @@ const Projects = () => {
 
 
   const filteredProjects =
-  filter === 'Featured'
-    ? projects.filter(p => p.isFeatured)
-    : filter === 'All'
-    ? projects
-    : projects.filter(p => p.category === filter);
+    filter === 'Featured'
+      ? projects.filter(p => p.isFeatured)
+      : filter === 'All'
+        ? projects
+        : projects.filter(p => p.category === filter);
 
 
   return (
@@ -191,8 +228,8 @@ const Projects = () => {
               onClick={() => setFilter(category)}
               variant={filter === category ? 'default' : 'outline'}
               className={`font-orbitron ${filter === category
-                  ? 'bg-primary text-primary-foreground border-glow'
-                  : 'hover:border-primary/50'
+                ? 'bg-primary text-primary-foreground border-glow'
+                : 'hover:border-primary/50'
                 }`}
             >
               {category}
