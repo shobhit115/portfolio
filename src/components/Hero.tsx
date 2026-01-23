@@ -15,7 +15,7 @@ const Hero = () => {
 
     // Redirect AFTER toast animation
     setTimeout(() => {
-      window.open("https://docs.google.com/document/d/1jFSlk10GIzyCWhy8B6UkfJz7wbGKQENN/edit?usp=sharing&ouid=110475960769074966492&rtpof=true&sd=true", "_blank");
+      window.open("https://drive.google.com/file/d/1OY1k3voPVyk9_MD0W6q9FDhnONSzXAj3/view?usp=sharing", "_blank");
     }, 2000); // same as toast duration
   };
 
