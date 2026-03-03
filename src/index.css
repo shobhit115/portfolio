@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+@layer base {
+  :root {
+    /* Matrix Green - Sleek & Modern */
+    --background: 150 20% 4%;
+    --foreground: 150 15% 92%;
+
+    --card: 150 18% 9%;
+    --card-foreground: 150 15% 92%;
+
+    --popover: 150 18% 9%;
+    --popover-foreground: 150 15% 92%;
+
+    /* Neon Green - Primary */
+    --primary: 150 100% 45%;
+    --primary-foreground: 150 20% 4%;
+
+    /* Navy Blue - Secondary */
+    --secondary: 220 55% 35%;
+    --secondary-foreground: 150 15% 92%;
+
+    --muted: 150 12% 14%;
+    --muted-foreground: 150 10% 58%;
+
+    /* Electric Blue - Accent */
+    --accent: 200 95% 60%;
+    --accent-foreground: 150 20% 4%;
+
+    /* Gold */
+    --star: 45 100% 58%;
+    --star-foreground: 150 20% 4%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 150 15% 92%;
+
+    --border: 150 12% 14%;
+    --input: 150 12% 14%;
+    --ring: 150 100% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-cosmic: linear-gradient(135deg, hsl(150, 20%, 4%) 0%, hsl(160, 35%, 8%) 50%, hsl(170, 40%, 12%) 100%);
+    --gradient-nebula: linear-gradient(45deg, hsl(150, 100%, 45%) 0%, hsl(200, 95%, 60%) 100%);
+    --gradient-aurora: linear-gradient(90deg, hsl(150, 100%, 45%), hsl(220, 55%, 35%), hsl(200, 95%, 60%));
+    
+    --glow-cyan: 0 0 22px hsla(150, 100%, 45%, 0.5), 0 0 45px hsla(150, 100%, 45%, 0.25);
+    --glow-blue: 0 0 22px hsla(200, 95%, 60%, 0.5), 0 0 45px hsla(200, 95%, 60%, 0.25);
+    --glow-star: 0 0 12px hsla(45, 100%, 58%, 0.7), 0 0 25px hsla(45, 100%, 58%, 0.35);
+
+    --sidebar-background: 150 18% 9%;
+    --sidebar-foreground: 150 15% 92%;
+    --sidebar-primary: 150 100% 45%;
+    --sidebar-primary-foreground: 150 20% 4%;
+    --sidebar-accent: 150 12% 14%;
+    --sidebar-accent-foreground: 150 15% 92%;
+    --sidebar-border: 150 12% 14%;
+    --sidebar-ring: 150 100% 45%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-nebula);
+  }
+
+  .glow-cyan {
+    text-shadow: var(--glow-cyan);
+  }
+
+  .glow-magenta {
+    text-shadow: var(--glow-magenta);
+  }
+
+  .border-glow {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .border-glow-magenta {
+    box-shadow: var(--glow-magenta);
+  }
+}
